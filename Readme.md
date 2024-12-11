@@ -1,2 +1,3 @@
-# Admin Console Credentials chai aur django
+# Chai aur Django Practice Project
+
 
