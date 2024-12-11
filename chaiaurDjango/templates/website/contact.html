@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur Django</title>
+    <link rel="stylesheet" href="{% static 'style_contact.css' %}">
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+    </nav>
+
+    <div class="container">
+        <form action="mailto:intelvostro470@gmail.com" method="post" enctype="text/plain">
+        <h1>Contact Form</h1> 
+        <hr>
+        <h4>First Name</h4> 
+        <input type="text" name="fName" id="fName" required placeholder="John">
+
+        <h4>Last Name</h4>
+        <input type="text" name="lName" id="lName" required placeholder="Doe">
+
+        <h4>Email Address</h4>
+        <input type="email" name="Email" id="email" required placeholder="abc123@email.com">
+
+        <h4>Contact  Number</h4>
+        <input type="tel" name="Tel" id="tel" placeholder="+91-9123456789">
+
+        <h4>Current Address</h4>
+        <input type="text" name="Addr" id="addr" placeholder="12,Burgandy St,London">
+
+        <p id="terms_text"><span id="astrisk">*</span> By contacting us, you agree to share above information.</p>
+        <br>
+        <input type="submit" value="Send Information">
+
+        
+    </form>
+    </div>
+    
+</body>
+</html>

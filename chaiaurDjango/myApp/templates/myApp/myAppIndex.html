@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+All Chai Page
+{% endblock %}
+
+{% block header %}
+All Chai Available Here
+{% endblock %}
+
+
+{% block content %}
+<a href="/myApp/chai_store"><h1 class="bg-slate-200 font-extrabold text-green-700">GO TO Chai Store</h1></a>
+<br>
+<div class="grid grid-cols-3 gap-4 m-4">
+    {% for chai in chais %}
+    <div class="chai-item bg-slate-800 p-4 rounded-xl shadow-2xl ">
+        <img class="rounded-xl" src="{{chai.image.url}}" alt="">
+        <h3 class="py-4 text-center text-gray-100 font-bold">{{chai.name}}</h3>
+        
+        {% comment %} Making a dynamic url to redirect into chai_details page with the help ot chai_id  {% endcomment %}
+        <a href="{% url 'chai_details' chai.id %}">
+            
+        <button type="button" class = "inline-flex items-center w-[100%] justify-center bg-transparent hover:bg-transparent text-white font-semibold hover:text-yellow-500 py-1 px-4 border border-y-slate-950 hover:border-x-slate-900 hover:border-y-yellow-500 rounded-none hover:transition-all">
+            {{chai.chai_type}} - {{chai.id}}
+        </button>
+    </a>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
+
+
+
